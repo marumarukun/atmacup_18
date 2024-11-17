@@ -1,6 +1,6 @@
 params:
-  objective: regression
-  metric: rmse
+  objective: regression_l1
+  metric: mae
   verbosity: -1
   boosting_type: gbdt
   learning_rate: 0.01
@@ -11,9 +11,10 @@ params:
   bagging_seed: 0
   feature_fraction: 0.9
   bagging_fraction: 0.9
+  bagging_freq: 1
   reg_alpha: 0.1
   reg_lambda: 0.1
 
 early_stopping_rounds: 100
-log_evaluation_period: 100
+log_evaluation_period: 500
 num_boost_round: 100000

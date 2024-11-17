@@ -1,6 +1,5 @@
 defaults:
   - _self_
-  - model@lgb: lgb
 
 exp_number: base   # 実験番号(実行時に書き換え)
 run_time: base     # 実験時間(実行時に書き換え)
@@ -16,3 +15,4 @@ data:
 
 seed: 319
 n_splits: 5
+target: target
