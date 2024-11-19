@@ -1,0 +1,37 @@
+defaults:
+  - _self_
+  - model@lgb: lgb
+
+exp_number: base   # 実験番号(実行時に書き換え)
+run_time: base     # 実験時間(実行時に書き換え)
+
+data:
+  input_root: ../../data/input
+  train_path: ${data.input_root}/train_features.csv
+  test_path: ${data.input_root}/test_features.csv
+  sample_submission_path: ${data.input_root}/sample_submission.csv
+  output_root: ../../data/output
+  results_root: ../../results
+  results_path: ${data.results_root}/${exp_number}/${run_time}
+
+seed: 319
+n_splits: 5
+target_cols:
+  - x_0
+  - y_0
+  - z_0
+  - x_1
+  - y_1
+  - z_1
+  - x_2
+  - y_2
+  - z_2
+  - x_3
+  - y_3
+  - z_3
+  - x_4
+  - y_4
+  - z_4
+  - x_5
+  - y_5
+  - z_5
