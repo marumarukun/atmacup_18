@@ -1,0 +1,8 @@
+model_name: tf_efficientnet_b0_ns
+size: 224
+pretrained: true
+in_chans: 3
+target_size: 18
+lr: 1e-3
+num_epochs: 20
+batch_size: 64
