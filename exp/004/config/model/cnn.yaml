@@ -5,4 +5,4 @@ in_chans: 3
 target_size: 18
 lr: 1e-3
 num_epochs: 20
-batch_size: 64
+batch_size: 32
