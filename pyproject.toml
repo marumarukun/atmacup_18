@@ -28,6 +28,7 @@ dependencies = [
     "bitsandbytes>=0.44.1",
     "einops>=0.8.0",
     "accelerate>=1.1.1",
+    "qwen-vl-utils>=0.0.8",
 ]
 
 [build-system]
