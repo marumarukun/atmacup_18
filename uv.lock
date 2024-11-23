@@ -30,6 +30,26 @@ resolution-markers = [
 ]
 
 [[package]]
+name = "accelerate"
+version = "1.1.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "huggingface-hub" },
+    { name = "numpy" },
+    { name = "packaging" },
+    { name = "psutil" },
+    { name = "pyyaml" },
+    { name = "safetensors" },
+    { name = "torch", version = "2.4.0", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "sys_platform == 'darwin' or (platform_machine == 'aarch64' and sys_platform == 'linux')" },
+    { name = "torch", version = "2.4.0", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine != 'aarch64' and platform_machine != 'x86_64' and sys_platform != 'darwin') or (platform_machine == 'aarch64' and sys_platform != 'darwin' and sys_platform != 'linux') or (platform_machine == 'x86_64' and sys_platform != 'darwin' and sys_platform != 'linux')" },
+    { name = "torch", version = "2.4.0+cu121", source = { registry = "https://download.pytorch.org/whl/cu121" }, marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/51/0b/179cc63d3a4f52e8cb233f2153a3e5a417522c85ea4b1dd25f6f2b377369/accelerate-1.1.1.tar.gz", hash = "sha256:0d39dfac557052bc735eb2703a0e87742879e1e40b88af8a2f9a93233d4cd7db", size = 335346 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/d1/d5/0050b2820a1e709ffa623f9a9e8ae42d0903535f2150613cbfeb7f16932a/accelerate-1.1.1-py3-none-any.whl", hash = "sha256:61edd81762131b8d4bede008643fa1e1f3bf59bec710ebda9771443e24feae02", size = 333211 },
+]
+
+[[package]]
 name = "albucore"
 version = "0.0.20"
 source = { registry = "https://pypi.org/simple" }
@@ -96,6 +116,21 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/45/1d/f03bcb60c4a3212e15f99a56085d93093a497718adf828d050b9d675da81/asttokens-2.4.1.tar.gz", hash = "sha256:b03869718ba9a6eb027e134bfdf69f38a236d681c83c160d510768af11254ba0", size = 62284 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/45/86/4736ac618d82a20d87d2f92ae19441ebc7ac9e7a581d7e58bbe79233b24a/asttokens-2.4.1-py2.py3-none-any.whl", hash = "sha256:051ed49c3dcae8913ea7cd08e46a606dba30b79993209636c4875bc1d637bc24", size = 27764 },
+]
+
+[[package]]
+name = "bitsandbytes"
+version = "0.44.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "numpy" },
+    { name = "torch", version = "2.4.0", source = { registry = "https://download.pytorch.org/whl/cpu" }, marker = "sys_platform == 'darwin' or (platform_machine == 'aarch64' and sys_platform == 'linux')" },
+    { name = "torch", version = "2.4.0", source = { registry = "https://pypi.org/simple" }, marker = "(platform_machine != 'aarch64' and platform_machine != 'x86_64' and sys_platform != 'darwin') or (platform_machine == 'aarch64' and sys_platform != 'darwin' and sys_platform != 'linux') or (platform_machine == 'x86_64' and sys_platform != 'darwin' and sys_platform != 'linux')" },
+    { name = "torch", version = "2.4.0+cu121", source = { registry = "https://download.pytorch.org/whl/cu121" }, marker = "platform_machine == 'x86_64' and sys_platform == 'linux'" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e4/e6/ccb84da7ffaf208a71c2c3c8e1120b34759df640db959660be9a98505eb4/bitsandbytes-0.44.1-py3-none-manylinux_2_24_x86_64.whl", hash = "sha256:b2f24c6cbf11fc8c5d69b3dcecee9f7011451ec59d6ac833e873c9f105259668", size = 122419627 },
+    { url = "https://files.pythonhosted.org/packages/5f/f5/11bddebb5addc0a005b0c1cecc6e4c6e4055ad7b860bdcbf6374e12a51f5/bitsandbytes-0.44.1-py3-none-win_amd64.whl", hash = "sha256:8e68e12aa25d2cf9a1730ad72890a5d1a19daa23f459a6a4679331f353d58cb4", size = 121451331 },
 ]
 
 [[package]]
@@ -268,6 +303,15 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/66/0c/8d907af351aa16b42caae42f9d6aa37b900c67308052d10fdce809f8d952/decorator-5.1.1.tar.gz", hash = "sha256:637996211036b6385ef91435e4fae22989472f9d571faba8927ba8253acbc330", size = 35016 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d5/50/83c593b07763e1161326b3b8c6686f0f4b0f24d5526546bee538c89837d6/decorator-5.1.1-py3-none-any.whl", hash = "sha256:b8c3f85900b9dc423225913c5aace94729fe1fa9763b38939a95226f02d37186", size = 9073 },
+]
+
+[[package]]
+name = "einops"
+version = "0.8.0"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/79/ca/9f5dcb8bead39959454c3912266bedc4c315839cee0e0ca9f4328f4588c1/einops-0.8.0.tar.gz", hash = "sha256:63486517fed345712a8385c100cb279108d9d47e6ae59099b07657e983deae85", size = 58861 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/44/5a/f0b9ad6c0a9017e62d4735daaeb11ba3b6c009d69a26141b258cd37b5588/einops-0.8.0-py3-none-any.whl", hash = "sha256:9572fb63046264a862693b0a87088af3bdc8c068fde03de63453cbbde245465f", size = 43223 },
 ]
 
 [[package]]
@@ -1862,7 +1906,10 @@ name = "uv-docker"
 version = "0.1.0"
 source = { editable = "." }
 dependencies = [
+    { name = "accelerate" },
     { name = "albumentations" },
+    { name = "bitsandbytes" },
+    { name = "einops" },
     { name = "hydra-core" },
     { name = "ipykernel" },
     { name = "japanize-matplotlib" },
@@ -1893,7 +1940,10 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "accelerate", specifier = ">=1.1.1" },
     { name = "albumentations", specifier = ">=1.4.21" },
+    { name = "bitsandbytes", specifier = ">=0.44.1" },
+    { name = "einops", specifier = ">=0.8.0" },
     { name = "hydra-core", specifier = ">=1.3.2" },
     { name = "ipykernel", specifier = ">=6.29.5" },
     { name = "japanize-matplotlib", specifier = ">=1.1.3" },
