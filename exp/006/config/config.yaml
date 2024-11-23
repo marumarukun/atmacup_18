@@ -11,6 +11,7 @@ data:
   test_path: ${data.input_root}/test_features.csv
   sample_submission_path: ${data.input_root}/sample_submission.csv
   img_root: ${data.input_root}/images
+  depth_root: ${data.input_root}/depth
   output_root: ../../data/output
   results_root: ../../results
   results_path: ${data.results_root}/${exp_number}/${run_time}
