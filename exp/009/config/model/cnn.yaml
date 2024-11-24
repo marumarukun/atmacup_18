@@ -1,0 +1,8 @@
+model_name: convnext_base.fb_in22k_ft_in1k
+size: 128
+pretrained: true
+in_chans: 20
+target_size: 18
+lr: 1e-3
+num_epochs: 20
+batch_size: 32
