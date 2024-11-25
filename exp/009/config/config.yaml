@@ -18,7 +18,7 @@ data:
   results_path: ${data.results_root}/${exp_number}/${run_time}
 
 seed: 319
-n_splits: 4
+n_splits: 5
 target_cols:
   - x_0
   - y_0

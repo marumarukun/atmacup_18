@@ -3,6 +3,6 @@ size: 128
 pretrained: true
 in_chans: 20
 target_size: 18
-lr: 1e-3
+lr: 1e-4
 num_epochs: 20
-batch_size: 32
+batch_size: 64
