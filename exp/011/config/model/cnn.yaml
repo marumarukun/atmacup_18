@@ -1,0 +1,9 @@
+# model_name: swin_base_patch4_window7_224.ms_in22k_ft_in1k
+model_name: resnet18.a1_in1k
+size: 224
+pretrained: true
+in_chans: 20
+target_size: 18
+lr: 1e-3
+num_epochs: 6
+batch_size: 64
