@@ -30,6 +30,7 @@ dependencies = [
     "accelerate>=1.1.1",
     "qwen-vl-utils>=0.0.8",
     "sentencepiece>=0.2.0",
+    "diffusers",
 ]
 
 [build-system]
@@ -58,6 +59,7 @@ torchvision = [
     { index = "torch-cuda", marker = "sys_platform == 'linux' and platform_machine == 'x86_64'"},
     { index = "torch-cpu", marker = "sys_platform == 'darwin' or ( sys_platform == 'linux' and platform_machine == 'aarch64')"},
 ]
+diffusers = { git = "https://github.com/huggingface/diffusers.git" }
 
 [[tool.uv.index]]
 name = "torch-cuda"
