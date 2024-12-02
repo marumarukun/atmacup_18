@@ -1,0 +1,8 @@
+model_name: resnet18
+size: 256
+pretrained: true
+in_chans: 20
+target_size: 18
+lr: 1e-3
+num_epochs: 10
+batch_size: 32
